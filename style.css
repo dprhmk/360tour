@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+#viewer-container {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    z-index: 1; /* Налаштуйте на нижчий рівень, щоб мініатюри були вище */
+}
+
+#thumbnails-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #222;
+    z-index: 2; /* Задаємо вищий z-index для мініатюр */
+    position: relative; /* Щоб z-index працював */
+}
+
+.thumbnail {
+    width: 80px;
+    height: 40px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.thumbnail.active {
+    border: 2px solid #fff;
+}
